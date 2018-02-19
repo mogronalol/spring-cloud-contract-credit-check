@@ -1,12 +1,11 @@
 package com.retailbank.creditcheckservice;
 
-import java.util.UUID;
-
 public class CreditCheckResponse {
-    private final String uuid = UUID.randomUUID().toString();
+    private String uuid;
     private Score score;
 
-    public CreditCheckResponse(Score score) {
+    public CreditCheckResponse(String uuid, Score score) {
+        this.uuid = uuid;
         this.score = score;
     }
 
@@ -16,6 +15,10 @@ public class CreditCheckResponse {
 
     public void setScore(Score score) {
         this.score = score;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     public String getUuid() {

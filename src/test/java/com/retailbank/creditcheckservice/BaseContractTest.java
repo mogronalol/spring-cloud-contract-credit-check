@@ -13,8 +13,8 @@ public class BaseContractTest {
     @Before
     public void setUp() {
         final CreditCheckService mock = mock(CreditCheckService.class);
-        when(mock.doCreditCheck(1234)).thenReturn(new CreditCheckResponse(HIGH));
-        when(mock.doCreditCheck(4444)).thenReturn(new CreditCheckResponse(LOW));
+        when(mock.doCreditCheck(1234)).thenReturn(new CreditCheckResponse("66ce29f3-ae87-4097-94e8-60b3b10c3855", HIGH));
+        when(mock.doCreditCheck(4444)).thenReturn(new CreditCheckResponse("66ce29f3-ae87-4097-94e8-60b3b10c3855", LOW));
         RestAssuredMockMvc.standaloneSetup(new CreditCheckController(mock));
     }
 }
