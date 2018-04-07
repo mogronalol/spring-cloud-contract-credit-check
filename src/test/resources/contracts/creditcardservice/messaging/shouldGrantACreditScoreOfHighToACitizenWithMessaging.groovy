@@ -1,9 +1,12 @@
-package contracts.creditcardservice
+package contracts.creditcardservice.messaging
 
 import org.springframework.cloud.contract.spec.Contract
 
 Contract.make {
     label("score_of_high")
+    input {
+        triggeredBy('scoreOfHigh()')
+    }
     outputMessage {
         sentTo("credit_scores")
         body(
