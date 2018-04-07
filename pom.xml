@@ -68,11 +68,6 @@
 				<extensions>true</extensions>
 				<configuration>
 					<baseClassForTests>com.retailbank.creditcheckservice.BaseContractTest</baseClassForTests>
-					<contractsWorkOffline>true</contractsWorkOffline>
-					<contractDependency>
-						<groupId>com.retailbank</groupId>
-						<artifactId>contracts</artifactId>
-					</contractDependency>
 				</configuration>
 			</plugin>
 		</plugins>
